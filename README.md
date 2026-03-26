@@ -1,132 +1,147 @@
-# 🐶 Hotel Bom Pra Cachorro
+# 🏨 Hotel Bom Pra Cachorro
 
-### 🎮 Jogo Interativo em Python
+> Jogo de lógica em Python desenvolvido como atividade prática de programação de nível básico.
+> 
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![Status](https://img.shields.io/badge/status-concluído-success)
-![License](https://img.shields.io/badge/license-academic-lightgrey)
+**Autora:** Emanuele Kmiecik
 
----
-
-## 👩‍💻 Autora
-
-**Emanuele Kmiecik**
+**Ambiente:** VSCode 
 
 ---
 
-## 📌 Sobre o Projeto
+## 📖 Sobre o Projeto
 
-O **Hotel Bom Pra Cachorro** é um jogo interativo desenvolvido em Python que roda diretamente no terminal.
+**Hotel Bom Pra Cachorro** é um jogo interativo de raciocínio lógico baseado em terminal. O jogador assume o papel de gerente de um hotel peculiar, onde os hóspedes são animais com regras rígidas de convivência. O desafio consiste em alocar corretamente cada personagem nos quartos disponíveis, respeitando as restrições impostas — sem que nenhum hóspede seja devorado pelo outro!
 
-O projeto utiliza lógica de programação para desafiar o jogador a organizar personagens em quartos, respeitando regras específicas para evitar conflitos.
-
-A interface é construída com **ASCII Art**, proporcionando uma experiência simples, criativa e totalmente baseada em texto.
+O projeto demonstra a aplicação prática de conceitos fundamentais de Python, como funções, estruturas condicionais, laços de repetição e arte ASCII.
 
 ---
 
-## 🎯 Objetivo
+## 🎮 Personagens
 
-Organizar corretamente os personagens nos quartos do hotel sem violar as regras.
-
-✔️ Acerte → Avança de fase
-❌ Erre → Game Over
-
----
-
-## 🐾 Personagens
-
-| Personagem | Representação |
-| ---------- | ------------- |
-| Cão        | 🐶            |
-| Gato       | 🐱            |
-| Rato       | 🐭            |
-| Queijo     | 🧀            |
-| Osso       | 🦴            |
+| Personagem | Descrição |
+| --- | --- |
+| 🐶 **Cão** | Hóspede agressivo — devora o Osso se ficarem no mesmo andar |
+| 🐱 **Gato** | Predador natural — come o Rato se forem vizinhos |
+| 🐭 **Rato** | Vulnerável — foge do Gato e devora o Queijo |
+| 🧀 **Queijo** | Item — desaparece se ficar perto do Rato |
+| 🦴 **Osso** | Item — é destruído se ficar ao lado do Cão |
 
 ---
 
-## ⚠️ Regras do Jogo
+## 📏 Regras do Hotel
 
-Para vencer, você deve respeitar:
+As seguintes combinações de quartos **são proibidas** (personagens não podem ser vizinhos de andar):
 
-* 🚫 Rato não pode ficar ao lado do Gato
-* 🚫 Cão não pode ficar ao lado do Osso
-* 🚫 Gato não pode ficar ao lado do Cão
-* 🚫 Queijo não pode ficar ao lado do Rato
+- 🐭 Rato **não pode** ficar ao lado do 🐱 Gato
+- 🐶 Cão **não pode** ficar ao lado do 🦴 Osso
+- 🐱 Gato **não pode** ficar ao lado do 🐶 Cão
 
----
-
-## 🧠 Mecânica
-
-* 🔹 4 fases progressivas
-* 🔹 Escolha de personagens e posições
-* 🔹 Validação automática das regras
-* 🔹 Feedback em tempo real
+> O hotel possui **8 quartos** distribuídos em **2 andares** com **4 quartos** cada. Quartos ocupados por hóspedes fixos são exibidos como `X X X X X` no mapa.
+> 
 
 ---
 
-## 🖥️ Interface
+## 🏆 Fases do Jogo
 
-O jogo apresenta:
+O jogo é composto por **4 fases** progressivas, cada uma adicionando novos personagens e aumentando a complexidade do desafio.
 
-* 🎨 ASCII Art (cenários e personagens)
-* ⭐ Sistema de progresso
-* ❌ Tela de erro (Game Over)
-* 🏆 Tela de vitória
+### Fase 1 — Introdução ao Hotel
+
+- Personagens disponíveis: **Gato** e **Rato**
+- Objetivo: Alocar os dois personagens sem que fiquem em quartos vizinhos
+- Recompensa: ⭐ (1 estrela)
+
+### Fase 2 — Chegada dos Cães
+
+- Personagens disponíveis: **2 Cães** e **Osso**
+- O hotel já tem hóspedes fixos; os quartos livres são limitados
+- Objetivo: Posicionar o Osso longe de todos os Cães
+- Recompensa: ⭐⭐ (2 estrelas)
+
+### Fase 3 — O Equilíbrio Delicado
+
+- Personagens disponíveis: **Gato**, **Rato** e **Osso**
+- Múltiplas combinações possíveis, mas apenas uma está correta
+- Objetivo: Alocar todos sem violações de vizinhança
+- Recompensa: ⭐⭐⭐ (3 estrelas)
+
+### Fase 4 — Desafio Final
+
+- Personagens disponíveis: **2 Queijos** e **Osso**
+- Fase mais complexa, com mais restrições simultâneas
+- Objetivo: Completar a alocação sem erros
+- Recompensa: ⭐⭐⭐⭐ (4 estrelas) + 🏆 Troféu de Vitória
 
 ---
 
-## ▶️ Como Executar
+## 🖥️ Como Executar
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+### Pré-requisitos
 
-# Acesse a pasta
-cd seu-repositorio
+- [Python 3.x](https://www.python.org/downloads/) instalado
+- [VSCode](https://code.visualstudio.com/) (recomendado) ou qualquer terminal
 
-# Execute o programa
-python nome_do_arquivo.py
+### Passos
+
+```jsx
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/hotel-bom-pra-cachorro.git
+
+# 2. Acesse a pasta do projeto
+cd hotel-bom-pra-cachorro
+
+# 3. Execute o jogo
+python hotel.py
 ```
 
-Ou execute diretamente no **Google Colab**.
+> ✅ Nenhuma dependência externa é necessária. O projeto usa apenas `os` da biblioteca padrão do Python.
+> 
 
 ---
 
-## 🏆 Resultado Final
-
-Ao completar todas as fases:
+## 📂 Estrutura do Código
 
 ```
-🏆 PARABÉNS!
-VOCÊ VENCEU!
+hotel-bom-pra-cachorro/
+├── hotel.py          # Código principal do jogo
+├── requirements.txt  # Dependências (biblioteca padrão — nenhuma instalação necessária)
+├── .gitignore        # Arquivos ignorados pelo Git
+└── README.md         # Este arquivo
 ```
 
 ---
 
-## 💡 Aprendizados
+## 💡 Conceitos de Python Aplicados
 
-Este projeto aplica na prática:
-
-* ✔️ Estruturas condicionais (if/else)
-* ✔️ Estruturas de repetição
-* ✔️ Funções
-* ✔️ Lógica de programação
-* ✔️ Interação com o usuário
-* ✔️ Criatividade com terminal
-
----
-
-## 🚀 Possíveis Melhorias
-
-* Interface gráfica (Tkinter ou PyQt)
-* Sistema de pontuação
-* Mais fases
-* Sons e animações
-* Versão web
+| Conceito | Aplicação no Projeto |
+| --- | --- |
+| **Funções (`def`)** | Modularização do código em blocos reutilizáveis |
+| **Estruturas condicionais (`if/elif/else`)** | Validação das escolhas do jogador |
+| **Laços de repetição (`while`)** | Loop do menu principal e reexibição de fases |
+| **`input()` / `int()`** | Captura e conversão de dados do usuário |
+| **`print()`** | Renderização da interface textual e arte ASCII |
+| **Bibliotecas externas** | Importação de `pandas`, `numpy` e `matplotlib` |
+| **`output.clear()`** | Atualização dinâmica da interface no Colab |
 
 ---
 
-## 📄 Licença
+## 📊 Resultados Possíveis
 
-Projeto desenvolvido para fins acadêmicos.
+```
+✅ Fase concluída → Estrelas acumuladas + avança para próxima fase
+❌ Erro de alocação → GAME OVER com mensagem explicativa
+🏆 Todas as fases → Troféu + mensagem de parabéns
+```
+
+---
+
+## 🤝 Como Contribuir
+
+1. Faça um **fork** do projeto
+2. Crie uma branch para sua feature: `git checkout -b minha-feature`
+3. Faça o commit: `git commit -m "feat: minha nova feature"`
+4. Envie para o repositório remoto: `git push origin minha-feature`
+5. Abra um **Pull Request**
+
+---
