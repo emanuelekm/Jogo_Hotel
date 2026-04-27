@@ -136,12 +136,3 @@ hotel-bom-pra-cachorro/
 
 ---
 
-## 🤝 Como Contribuir
-
-1. Faça um **fork** do projeto
-2. Crie uma branch para sua feature: `git checkout -b minha-feature`
-3. Faça o commit: `git commit -m "feat: minha nova feature"`
-4. Envie para o repositório remoto: `git push origin minha-feature`
-5. Abra um **Pull Request**
-
----
