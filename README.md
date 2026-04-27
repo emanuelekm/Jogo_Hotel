@@ -1,4 +1,7 @@
-# 🏨 Hotel Bom Pra Cachorro
+<p align="center">
+  <img src="jogo_hotel.png" alt="Banner do Projeto" width="100%">
+</p>
+
 
 > Jogo de lógica em Python desenvolvido como atividade prática de programação de nível básico.
 > 
