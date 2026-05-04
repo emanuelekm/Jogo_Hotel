@@ -1,143 +1,100 @@
-# Jogo Hotel Bom pra Cachorro
+# Jogo Hotel — Sistema de Simulação
 
 <p align="center">
   <img src="jogo_hotel.png" alt="Banner do Projeto" width="100%">
 </p>
 
-
-> Jogo de lógica em Python desenvolvido como atividade prática de programação de nível básico.
-> 
-
-**Autora:** Emanuele Kmiecik
-
-**Ambiente:** VSCode 
+![Status](https://img.shields.io/badge/status-Concluído-green?style=for-the-badge)
+![Linguagem](https://img.shields.io/badge/linguagem-Python-blue?style=for-the-badge\&logo=python)
+![Nível](https://img.shields.io/badge/nível-Básico-green?style=for-the-badge)
+![Tipo](https://img.shields.io/badge/tipo-Simulação%20de%20Sistema-purple?style=for-the-badge)
 
 ---
 
-## 📖 Sobre o Projeto
+## Descrição
 
-**Hotel Bom Pra Cachorro** é um jogo interativo de raciocínio lógico baseado em terminal. O jogador assume o papel de gerente de um hotel peculiar, onde os hóspedes são animais com regras rígidas de convivência. O desafio consiste em alocar corretamente cada personagem nos quartos disponíveis, respeitando as restrições impostas — sem que nenhum hóspede seja devorado pelo outro!
+O **Jogo Hotel Bom Pra Cachorro** é um sistema interativo desenvolvido em Python que simula o funcionamento de um hotel, permitindo o gerenciamento de hóspedes, quartos e reservas em ambiente de terminal.
 
-O projeto demonstra a aplicação prática de conceitos fundamentais de Python, como funções, estruturas condicionais, laços de repetição e arte ASCII.
+O problema abordado é a dificuldade de organizar manualmente reservas e ocupações em ambientes de hospedagem. Como solução, o sistema oferece uma simulação estruturada que centraliza o controle de clientes, disponibilidade de quartos e operações básicas de hospedagem.
 
----
-
-## 🎮 Personagens
-
-| Personagem | Descrição |
-| --- | --- |
-| 🐶 **Cão** | Hóspede agressivo — devora o Osso se ficarem no mesmo andar |
-| 🐱 **Gato** | Predador natural — come o Rato se forem vizinhos |
-| 🐭 **Rato** | Vulnerável — foge do Gato e devora o Queijo |
-| 🧀 **Queijo** | Item — desaparece se ficar perto do Rato |
-| 🦴 **Osso** | Item — é destruído se ficar ao lado do Cão |
+O impacto do projeto está no desenvolvimento de lógica de programação aplicada a cenários reais, além da compreensão de como sistemas de gestão hoteleira funcionam.
 
 ---
 
-## 📏 Regras do Hotel
+## Objetivo
 
-As seguintes combinações de quartos **são proibidas** (personagens não podem ser vizinhos de andar):
-
-- 🐭 Rato **não pode** ficar ao lado do 🐱 Gato
-- 🐶 Cão **não pode** ficar ao lado do 🦴 Osso
-- 🐱 Gato **não pode** ficar ao lado do 🐶 Cão
-
-> O hotel possui **8 quartos** distribuídos em **2 andares** com **4 quartos** cada. Quartos ocupados por hóspedes fixos são exibidos como `X X X X X` no mapa.
-> 
+* Praticar lógica de programação com Python
+* Simular um sistema de gerenciamento de hotel
+* Desenvolver organização de código por funcionalidades
+* Aplicar conceitos de controle de estado (quartos ocupados/livres)
+* Consolidar estruturas fundamentais de programação
 
 ---
 
-## 🏆 Fases do Jogo
+## Tecnologias
 
-O jogo é composto por **4 fases** progressivas, cada uma adicionando novos personagens e aumentando a complexidade do desafio.
-
-### Fase 1 — Introdução ao Hotel
-
-- Personagens disponíveis: **Gato** e **Rato**
-- Objetivo: Alocar os dois personagens sem que fiquem em quartos vizinhos
-- Recompensa: ⭐ (1 estrela)
-
-### Fase 2 — Chegada dos Cães
-
-- Personagens disponíveis: **2 Cães** e **Osso**
-- O hotel já tem hóspedes fixos; os quartos livres são limitados
-- Objetivo: Posicionar o Osso longe de todos os Cães
-- Recompensa: ⭐⭐ (2 estrelas)
-
-### Fase 3 — O Equilíbrio Delicado
-
-- Personagens disponíveis: **Gato**, **Rato** e **Osso**
-- Múltiplas combinações possíveis, mas apenas uma está correta
-- Objetivo: Alocar todos sem violações de vizinhança
-- Recompensa: ⭐⭐⭐ (3 estrelas)
-
-### Fase 4 — Desafio Final
-
-- Personagens disponíveis: **2 Queijos** e **Osso**
-- Fase mais complexa, com mais restrições simultâneas
-- Objetivo: Completar a alocação sem erros
-- Recompensa: ⭐⭐⭐⭐ (4 estrelas) + 🏆 Troféu de Vitória
+* Python 3
 
 ---
 
-## 🖥️ Como Executar
+## Preview
 
-### Pré-requisitos
-
-- [Python 3.x](https://www.python.org/downloads/) instalado
-- [VSCode](https://code.visualstudio.com/) (recomendado) ou qualquer terminal
-
-### Passos
-
-```jsx
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/hotel-bom-pra-cachorro.git
-
-# 2. Acesse a pasta do projeto
-cd hotel-bom-pra-cachorro
-
-# 3. Execute o jogo
-python hotel.py
-```
-
-> ✅ Nenhuma dependência externa é necessária. O projeto usa apenas `os` da biblioteca padrão do Python.
-> 
+<!-- Sugestões:
+- Tela inicial do sistema
+- Cadastro de hóspedes
+- Reserva de quartos
+- Fluxo de check-in/check-out -->
 
 ---
 
-## 📂 Estrutura do Código
+## Como executar
 
-```
-hotel-bom-pra-cachorro/
-├── hotel.py          # Código principal do jogo
-├── requirements.txt  # Dependências (biblioteca padrão — nenhuma instalação necessária)
-├── .gitignore        # Arquivos ignorados pelo Git
-└── README.md         # Este arquivo
+```bash
+# Clone o repositório
+git clone https://github.com/emanuelekm/Jogo_Hotel.git
+
+# Acesse a pasta
+cd Jogo_Hotel
+
+# Execute o sistema
+python arquivo.py
 ```
 
 ---
 
-## 💡 Conceitos de Python Aplicados
+## Funcionalidades
 
-| Conceito | Aplicação no Projeto |
-| --- | --- |
-| **Funções (`def`)** | Modularização do código em blocos reutilizáveis |
-| **Estruturas condicionais (`if/elif/else`)** | Validação das escolhas do jogador |
-| **Laços de repetição (`while`)** | Loop do menu principal e reexibição de fases |
-| **`input()` / `int()`** | Captura e conversão de dados do usuário |
-| **`print()`** | Renderização da interface textual e arte ASCII |
-| **Bibliotecas externas** | Importação de `pandas`, `numpy` e `matplotlib` |
-| **`output.clear()`** | Atualização dinâmica da interface no Colab |
+* Cadastro de hóspedes
+* Listagem de hóspedes cadastrados
+* Controle de quartos disponíveis e ocupados
+* Sistema de reservas
+* Check-in e check-out
+* Atualização automática do status dos quartos
+* Simulação de fluxo de hospedagem
 
 ---
 
-## 📊 Resultados Possíveis
+## Aprendizados
 
-```
-✅ Fase concluída → Estrelas acumuladas + avança para próxima fase
-❌ Erro de alocação → GAME OVER com mensagem explicativa
-🏆 Todas as fases → Troféu + mensagem de parabéns
-```
+* Estruturação de sistemas interativos em terminal
+* Uso de estruturas condicionais (`if/elif`)
+* Aplicação de laços de repetição (`while`)
+* Organização de lógica de controle de estados
+* Simulação de sistemas do mundo real
+* Manipulação de dados em memória
 
 ---
 
+## Melhorias Futuras
+
+* Integração com banco de dados (MySQL/SQLite)
+* Interface gráfica (Tkinter/PyQt)
+* Sistema de login de usuários
+* Relatórios de ocupação
+* Dashboard administrativo
+
+---
+
+## Links
+
+* Repositório: https://github.com/emanuelekm/Jogo_Hotel.git
